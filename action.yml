@@ -1,5 +1,5 @@
 # action.yml
-name: 'Trigger Job'
+name: 'Trigger Concourse Job'
 author: Josh Ghiloni
 description: 'Trigger a Concourse Job'
 branding:
