@@ -1,0 +1,30 @@
+# action.yml
+name: 'Trigger Job'
+author: Josh Ghiloni
+description: 'Trigger a Concourse Job'
+branding:
+  icon: plus-circle
+  color: green
+inputs:
+  concourse-url:
+    description: 'The base concourse URL'
+    required: true
+  concourse-team:
+    description: 'The concourse team where the pipeline lives'
+    required: true
+    default: 'main'
+  concourse-pipeline:
+    description: 'The concourse pipeline where the job lives'
+    required: true
+  concourse-job:
+    description: 'The job in the pipeline to trigger'
+    required: true
+  concourse-username:
+    description: 'A local auth user with the rights to trigger the job'
+    required: true
+  concourse-password:
+    description: 'The password for concourse-user'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
